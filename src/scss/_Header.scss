@@ -1,0 +1,124 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    transition: background-color .3s ease;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 30px;
+}
+
+nav#nav {
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-left {
+    padding-left: 36px;
+}
+
+#nav ul {
+  
+    letter-spacing: 1px;
+    font-weight: 300;
+
+    & li {
+        list-style-type: none;
+    }
+}
+
+.login {
+    margin-right: 115px;
+}
+
+.login img {
+    margin-left: 5px;
+}
+
+ul#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 342px;
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(desktop) {
+        flex-direction: column;
+        height: 130px;
+    }
+}
+
+#menu li {
+    display:inline-block;
+    margin-right: 1px;
+}
+
+.nav-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(desktop) {
+        flex-direction: column;
+        width: 300px;
+        align-items: baseline;
+    }
+}
+
+.nav-mobile-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 28px;
+    @include breakpoint(desktop) {
+        display: none;
+    }
+}
+
+.show-menu {
+    text-align: center;
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 10;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .nav-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 365px;
+    justify-content: center;
+    align-items: center;
+    background-color: #50e3b3;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -28px;
+    right: 0;
+}
+
+@media screen and (max-width : 1200px){
+    .show-menu {
+        display:block;
+    }
+}

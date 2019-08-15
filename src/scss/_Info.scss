@@ -1,0 +1,57 @@
+.info {
+    position: relative;
+    background: url('../img/info/info.jpg') no-repeat;
+    background-size: cover;
+    height: 785px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info img {
+    width: 100%;
+}
+
+.info-content {
+    width: 840px;
+    color: #fff;
+    @include breakpoint(tablet) {
+        width: 600px;
+    }
+    @include breakpoint(mobile-large) {
+        width: 550px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0 45px;
+    }
+    @include breakpoint(mobile-small) {
+        padding: 15px 25px;
+    }
+
+    & h2 {
+        font-size: 38px;
+        font-weight: 400;
+        margin: 0;
+        @include breakpoint(mobile) {
+            font-size: 30px;
+        }
+        @include breakpoint(mobile-small) {
+            font-size: 24px;
+        }
+    }
+
+    & p {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 18px;
+        @include breakpoint(mobile) {
+            font-size: 18px;
+        }
+
+        @include breakpoint(mobile-small) {
+            font-size: 16px;
+        }
+        
+    }
+}

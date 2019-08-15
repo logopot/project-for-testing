@@ -1,0 +1,34 @@
+.banner728x90 {
+    position: absolute;
+    display: flex;
+    width: 728px;
+    height: 90px;
+    background-color: #333;
+    border: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    bottom: 3%;
+    left: calc(50% - 364px);
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.banner970x250 {
+    display: flex;
+    width: 970px;
+    height: 250px;
+    background-color: #333;
+    border: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}

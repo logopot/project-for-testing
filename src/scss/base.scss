@@ -1,0 +1,48 @@
+@import '_Variables.scss';
+@import '_Header.scss';
+@import '_Button.scss';
+@import '_Language.scss';
+@import '_Carousel.scss';
+@import '_Search.scss';
+@import '_Banners.scss';
+@import '_Info.scss';
+@import '_Advertize.scss';
+@import '_Footer.scss';
+
+@import '_Plan.scss';
+
+* {
+    font-family: $font;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background-color: $secondary-color;
+  }
+  
+  ::selection {
+    background-color: $secondary-color; 
+  }
+
+a {
+    display: flex;
+    color: $navLinkColor;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    @include breakpoint(tablet-large) {
+        font-size: 14px;
+    }
+
+    &:hover {
+        color: $navLinkColorHover;
+    }
+}

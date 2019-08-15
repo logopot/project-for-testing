@@ -1,0 +1,61 @@
+.language {
+	position: relative;
+
+}
+
+.language .language-arrow {
+	position: absolute;
+    right: 23px;
+    top: 5px;
+	width: 15px;
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+.languagepicker {
+    position: absolute;
+    top: -5px;
+    right: -33px;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 0 50px 10px 0;
+	vertical-align: top;
+}
+
+.languagepicker:hover {
+	height: 81px;
+}
+
+.languagepicker a{
+	text-decoration: none;
+}
+
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+}
+
+.languagepicker li:hover{
+	background-color: transparent;
+}
+
+.languagepicker a:first-child li {
+	border: none;
+	background: transparent !important;
+}
+
+.languagepicker li img {
+	margin-right: 5px;
+}
+
+.roundborders {
+	border-radius: 5px;
+}
+
+.large:hover {
+	height: 122px;
+}

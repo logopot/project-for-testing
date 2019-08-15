@@ -1,0 +1,73 @@
+.advertize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 67px 0;
+}
+
+.advertize-wrapper {
+    padding: 15px 125px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+        padding: 15px 75px;
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+
+    @include breakpoint(mobile-small) {
+        padding: 15px 25px;
+    }
+}
+
+.content-right {
+    width: 46%;
+    margin-top: 15px;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+
+    & img {
+        @include breakpoint(desktop) {
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
+.content-left {
+    width: calc(55% - 50px);
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+    & h2 {
+        width: 80%;
+        font-size: 36px;
+        font-weight: 400;
+        margin: 0;
+        @include breakpoint(mobile-large) {
+            width: 100%;
+            font-size: 28px;
+        }
+    }
+
+    & .content-left-subtitle {
+        font-size: 20px;
+        margin-bottom: 29px;
+    }
+
+    & p:last-of-type { 
+        width: 90%;
+        line-height: 27px;
+        margin-bottom: 35px;
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
+    }
+}

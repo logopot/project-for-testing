@@ -1,0 +1,107 @@
+
+/* Slideshow container */
+.slideshow-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.slick-slider .slick-list, .slick-slider .slick-track {
+    height: 778px !important;
+}
+
+.slick-dots {
+    bottom: 155px !important;
+    @include breakpoint(tablet) {
+        bottom: 120px !important;
+    }
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: unset !important;
+    color: $secondary-color;
+}
+
+.slick-dots li button:before {
+    font-size: 13px !important;
+    opacity: unset !important;
+    color: $navLinkColor;
+}
+
+.slick-prev, .slick-next {
+    z-index: 9000;
+    @include breakpoint(mobile) {
+        display: none !important;
+    }
+}
+
+.slick-prev {
+    left: 25px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.slick-next {
+    right: 25px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.slick-next.slick-disabled:before, 
+.slick-prev.slick-disabled:before,
+.slick-next:before, .slick-prev:before,
+.slick-next:focus:before, .slick-next:hover:before, 
+.slick-prev:focus:before, .slick-prev:hover:before {
+    opacity: 0;
+}
+
+/* Caption text */
+.text {
+    color: $navLinkColor;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 8px 12px;
+    margin: 0;
+    position: absolute;
+    top: 36%;
+    left: calc(50% - 368px);
+    width: 720px;
+    text-align: center;
+    @include breakpoint(tablet) {
+        font-size: 35px;
+        left: calc(50% - 280px);
+        width: 560px;
+        top: 39%;
+    }
+    @include breakpoint(mobile) {
+        font-size: 28px;
+        left: calc(50% - 200px);
+        width: 400px;
+    }
+    @include breakpoint(mobile-small) {
+        font-size: 25px;
+        left: calc(50% - 150px);
+        width: 300px;
+    }
+}
+.mySlides {
+    height: 778px;
+    @include breakpoint(tablet) {
+        height: 540px;
+    }
+}
+
+.slick-list .slick-slide img.slider-image {
+    @include breakpoint(desktop-default) {
+        width: 1440px;
+    }
+}

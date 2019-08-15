@@ -1,0 +1,104 @@
+form.form {
+    position: absolute;
+    top: 66%;
+    left: calc(50% - 420px);
+    display: flex;
+    @include breakpoint(tablet) {
+        left: calc(50% - 220px);
+        flex-direction: column;
+        height: 220px;
+        justify-content: space-between;
+    }
+    @include breakpoint(mobile) {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input img {
+    width: unset;
+    position: absolute;
+    right: 29px;
+    top: 17px;
+}
+
+.form-text-input {
+    position: relative;
+    width: 436px;
+    height: 56px;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-right: 5px;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.form-select {
+    position: relative;
+    width: 218px;
+    height: 56px;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-right: 5px;
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+}
+
+select.form-select{
+
+    background: url("../img/arrow.svg") no-repeat right #fff;
+    -webkit-appearance: none;
+    background-position-x: 190px;
+    background-size: 15px;
+    @include breakpoint(tablet) {
+        background-position-x: 397px;
+    }
+    @include breakpoint(mobile) {
+        background-position-x: 258px;
+    }
+}
+
+.form-button {
+    position: relative;
+    width: 176px;
+    padding-left: 15px;
+    height: 56px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    font-size: 16px;
+    cursor: pointer;
+    color: $navLinkColor;
+    transition: background-color 0.3s ease;
+    @include breakpoint(tablet) {
+        width: 100%;
+        padding-left: 55px;
+    }
+    @include breakpoint(mobile) {
+        padding-left: 48px;
+    }
+
+    & img {
+        position: absolute;
+        left: 35px;
+        width: 25px;
+        @include breakpoint(tablet) {
+            left: 175px;
+        }
+        @include breakpoint(mobile) {
+            left: 110px;
+        }
+    }
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}

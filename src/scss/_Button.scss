@@ -1,0 +1,85 @@
+.button {
+    width: 289px;
+    height: 56px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 24px;
+    background-color: transparent;
+    color: $navLinkColor;
+    box-shadow: none;
+    border: 2px solid $secondary-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include breakpoint(tablet-large) {
+        font-size: 14px;
+    }
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+.button-more {
+    width: 289px;
+    height: 56px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 24px;
+    background-color: $secondary-color;
+    color: $navLinkColor;
+    box-shadow: none;
+    border: 2px solid $secondary-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.button-dark {
+    border: 0;
+    background-color: $primary-color;
+    @include breakpoint(mobile-large) {
+        width: 220px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+.button-nav {
+    width: 210px;
+    height: 48px;
+    margin-left: 10px;
+    margin-top: 5px;
+    @include breakpoint(tablet-large) {
+        width: 170px;
+        height: 40px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 45px;
+        background-color: $navLinkColor;
+        color: $secondary-color;
+    }
+
+}
+
+.button-footer-list {
+    width: 167px;
+    height: 37px;
+    font-size: 13px;
+    margin-bottom: 9px;
+    @include breakpoint(mobile-large) {
+        width: 134px;
+        font-size: 11px;
+    }
+}

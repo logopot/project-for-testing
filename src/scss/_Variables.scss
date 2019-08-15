@@ -1,0 +1,47 @@
+$primary-color: #24345c; // dark blue
+$secondary-color: #50e3b3; //light green
+$navLinkColor: #fff; // white
+$navLinkColorHover: #6d7893; //indigo
+
+$font: 'Montserrat', sans-serif; // primary font
+
+
+
+//  Responsive -------------------------------------------------------------------------->
+$layout-mobile-small:           20em;           //320px
+$layout-mobile:                 30em;           //480px
+$layout-mobile-large:           40em;           //640px
+$layout-tablet:                 48em;           //767px
+$layout-tablet-large:           61.875em;       //990px
+$layout-tablet-landscape:       64em;           //1024px
+$layout-desktop:                75em;           //1200px
+$layout-desktop-default:        90em;           //1440px
+
+
+// Responsive breakpoints ---------------------------------------------------------------->
+@mixin breakpoint($media) {
+  @if $media == mobile-small {
+    @media only screen and (max-width: $layout-mobile-small) {@content;}
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $layout-mobile) {@content;}
+  }
+  @else if $media == mobile-large {
+    @media only screen and (max-width: $layout-mobile-large) {@content;}
+  }
+  @else if $media == tablet {
+    @media only screen and (max-width: $layout-tablet) {@content;}
+  }
+  @else if $media == tablet-large {
+    @media only screen and (max-width: $layout-tablet-large) {@content;}
+  }
+  @else if $media == tablet-landscape {
+    @media only screen and (max-width: $layout-tablet-landscape) {@content;}
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: $layout-desktop) {@content;}
+  }
+  @else if $media == desktop-default {
+    @media only screen and (max-width: $layout-desktop-default) {@content;}
+  }
+}
